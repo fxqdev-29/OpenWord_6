@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Tab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       GOOGLE HOMEPAGE REPLICA (backdrop)
+       ============================================================ -->
+  <main class="google-page">
+
+    <header class="g-top">
+      <nav class="g-top-left">
+        <a href="https://about.google/" class="g-link">About</a>
+        <a href="https://store.google.com/" class="g-link">Store</a>
+      </nav>
+      <nav class="g-top-right">
+        <a href="https://mail.google.com/" class="g-link">Gmail</a>
+        <a href="https://images.google.com/" class="g-link">Images</a>
+        <a href="#" class="g-apps" title="Google apps">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="#5f6368">
+            <circle cx="5" cy="5" r="2"/><circle cx="12" cy="5" r="2"/><circle cx="19" cy="5" r="2"/>
+            <circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/>
+            <circle cx="5" cy="19" r="2"/><circle cx="12" cy="19" r="2"/><circle cx="19" cy="19" r="2"/>
+          </svg>
+        </a>
+        <a href="https://accounts.google.com/" class="g-signin">Sign in</a>
+      </nav>
+    </header>
+
+    <div class="g-center">
+      <div class="g-logo" aria-label="Google">
+        <span style="color:#4285f4">G</span><span style="color:#ea4335">o</span><span style="color:#fbbc04">o</span><span style="color:#4285f4">g</span><span style="color:#34a853">l</span><span style="color:#ea4335">e</span>
+      </div>
+
+      <form class="g-search" id="g-form" autocomplete="off">
+        <div class="g-search-bar">
+          <svg class="g-si" viewBox="0 0 24 24" width="20" height="20" fill="#9aa0a6">
+            <path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 10-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1114 9.5 4.5 4.5 0 019.5 14z"/>
+          </svg>
+          <input type="text" id="g-input" aria-label="Search" />
+          <svg class="g-si g-si-mic" viewBox="0 0 24 24" width="22" height="22" fill="#4285f4">
+            <path d="M12 14a3 3 0 003-3V5a3 3 0 10-6 0v6a3 3 0 003 3zm5-3a5 5 0 01-10 0H5a7 7 0 006 6.92V21h2v-3.08A7 7 0 0019 11h-2z"/>
+          </svg>
+          <svg class="g-si g-si-lens" viewBox="0 0 24 24" width="22" height="22" fill="#4285f4">
+            <path d="M12 8a4 4 0 100 8 4 4 0 000-8zm0 6a2 2 0 110-4 2 2 0 010 4zM19.6 7.6l-1.2-.9V4.5A1.5 1.5 0 0016.9 3H7.1A1.5 1.5 0 005.6 4.5v2.2l-1.2.9A1.5 1.5 0 003.8 8.8v10.7A1.5 1.5 0 005.3 21h13.4a1.5 1.5 0 001.5-1.5V8.8c0-.48-.24-.92-.6-1.2z"/>
+          </svg>
+        </div>
+        <div class="g-search-actions">
+          <button type="submit" class="g-btn">Google Search</button>
+          <button type="button" id="g-lucky" class="g-btn">I'm Feeling Lucky</button>
+        </div>
+      </form>
+
+      <div class="g-shortcuts" id="g-shortcuts"></div>
+    </div>
+
+    <footer class="g-footer">
+      <div class="g-footer-left">
+        <a href="https://ads.google.com/">Advertising</a>
+        <a href="https://business.google.com/">Business</a>
+        <a href="https://about.google/">How Search works</a>
+      </div>
+      <div class="g-footer-right">
+        <a href="https://policies.google.com/privacy">Privacy</a>
+        <a href="https://policies.google.com/terms">Terms</a>
+        <a href="#">Settings</a>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ============================================================
+       OPENWORD FLOATING SIDEBAR
+       ============================================================ -->
+  <aside class="ow-sidebar" id="ow-sidebar" data-theme="dark">
+
+    <header class="ow-titlebar">
+      <div class="ow-brand">
+        <span class="ow-brand-dot"></span>
+        <span class="ow-brand-name">OpenWord</span>
+      </div>
+      <div class="ow-titlebar-actions">
+        <button class="ow-icon-btn" data-action="open-settings" title="Settings">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M19.14 12.94a7.07 7.07 0 000-1.88l2.03-1.58a.5.5 0 00.12-.64l-1.92-3.32a.5.5 0 00-.6-.22l-2.39.96a7.03 7.03 0 00-1.52-.88l-.36-2.54A.5.5 0 0013.98 2h-3.96a.5.5 0 00-.5.42l-.36 2.54c-.54.22-1.05.51-1.52.88l-2.39-.96a.5.5 0 00-.6.22L2.73 8.42a.5.5 0 00.12.64l2.03 1.58a7.07 7.07 0 000 1.88l-2.03 1.58a.5.5 0 00-.12.64l1.92 3.32c.13.22.4.3.6.22l2.39-.96c.47.37.98.66 1.52.88l.36 2.54c.04.24.24.42.5.42h3.96c.25 0 .45-.18.5-.42l.36-2.54c.54-.22 1.05-.51 1.52-.88l2.39.96c.22.08.47 0 .6-.22l1.92-3.32a.5.5 0 00-.12-.64l-2.03-1.58zM12 15.5a3.5 3.5 0 110-7 3.5 3.5 0 010 7z"/>
+          </svg>
+        </button>
+        <button class="ow-icon-btn" data-action="toggle-collapse" title="Collapse">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M19 13H5v-2h14v2z"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <section class="ow-panel" data-panel="main">
+      <div class="ow-word-tags">
+        <span class="ow-tag" id="ow-lang">French</span>
+        <span class="ow-tag ow-tag-topic" id="ow-topic">School</span>
+        <span class="ow-tag ow-tag-pos" id="ow-pos">Noun · Feminine</span>
+      </div>
+
+      <div class="ow-word-block">
+        <h1 class="ow-word" id="ow-word">école</h1>
+        <p class="ow-word-ipa" id="ow-ipa">/e.kɔl/</p>
+      </div>
+
+      <p class="ow-definition" id="ow-def">
+        An institution where children are taught; a place of education.
+      </p>
+
+      <div class="ow-example-block">
+        <p class="ow-example" id="ow-example">"Mon école est près d'ici."</p>
+        <p class="ow-example-en" id="ow-example-en">"My school is near here."</p>
+      </div>
+
+      <div class="ow-actions">
+        <button class="ow-btn ow-btn-primary" data-action="deep-dive">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+            <path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 10-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1114 9.5 4.5 4.5 0 019.5 14z"/>
+          </svg>
+          Deep Dive
+        </button>
+        <button class="ow-btn ow-btn-ghost" data-action="shuffle" title="New word">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M17.65 6.35A8 8 0 103.35 17.65l1.42-1.42a6 6 0 118.49 0L17.65 6.35zM13 3v4h4l-4-4z"/>
+          </svg>
+        </button>
+        <button class="ow-btn ow-btn-ghost" data-action="favourite" id="ow-fav" title="Favourite">☆</button>
+      </div>
+
+      <div class="ow-spacer"></div>
+
+      <div class="ow-bank-preview">
+        <div class="ow-section-head">
+          <span>Recent</span>
+          <button class="ow-link" data-action="open-bank">View all →</button>
+        </div>
+        <div class="ow-mini-list" id="ow-mini-list"></div>
+      </div>
+    </section>
+
+    <section class="ow-panel hidden" data-panel="settings">
+      <div class="ow-panel-head">
+        <button class="ow-back" data-action="back-to-main" title="Back">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+          </svg>
+        </button>
+        <h2>Settings</h2>
+      </div>
+
+      <div class="ow-settings-body">
+        <div class="ow-group">
+          <label class="ow-label">Appearance</label>
+          <div class="ow-theme-row" id="ow-themes">
+            <button class="ow-theme-swatch" data-theme="dark"   title="Dark"></button>
+            <button class="ow-theme-swatch" data-theme="light"  title="Light"></button>
+            <button class="ow-theme-swatch" data-theme="pastel" title="Pastel"></button>
+            <button class="ow-theme-swatch" data-theme="neon"   title="Neon"></button>
+          </div>
+        </div>
+
+        <div class="ow-group">
+          <label class="ow-label">Languages</label>
+          <div class="ow-chip-wrap" id="ow-langs"></div>
+        </div>
+
+        <div class="ow-group">
+          <label class="ow-label">Topics</label>
+          <div class="ow-chip-wrap" id="ow-topics"></div>
+        </div>
+
+        <div class="ow-group">
+          <label class="ow-label">Refresh Interval</label>
+          <select class="ow-select" id="ow-interval">
+            <option value="newtab">Every New Tab</option>
+            <option value="1h">Every 1 Hour</option>
+            <option value="4h">Every 4 Hours</option>
+            <option value="24h">Every 24 Hours</option>
+          </select>
+        </div>
+
+        <div class="ow-group">
+          <label class="ow-label">Custom Vocabulary</label>
+          <p class="ow-hint">One per line: <code>mot = word</code></p>
+          <textarea class="ow-textarea" id="ow-custom" rows="4"
+            placeholder="bonjour = hello&#10;merci = thank you"></textarea>
+          <button class="ow-btn ow-btn-primary ow-btn-full" data-action="save-custom">
+            Save to Bank
+          </button>
+        </div>
+
+        <div class="ow-group">
+          <label class="ow-label">Learning Goals</label>
+          <p class="ow-hint">Describe what you want to learn in plain English.</p>
+          <textarea class="ow-textarea" id="ow-goals" rows="3"
+            placeholder="e.g. I'm traveling to Japan next month and want travel + food vocabulary."></textarea>
+          <button class="ow-btn ow-btn-primary ow-btn-full" data-action="apply-goals">
+            Apply Goals
+          </button>
+          <span class="ow-status" id="ow-goal-status"></span>
+        </div>
+
+        <div class="ow-group">
+          <label class="ow-label">Data</label>
+          <div class="ow-row">
+            <button class="ow-btn ow-btn-ghost" data-action="export">Export</button>
+            <button class="ow-btn ow-btn-ghost" data-action="rerun-setup">Setup</button>
+            <button class="ow-btn ow-btn-danger" data-action="reset">Reset</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ow-panel hidden" data-panel="bank">
+      <div class="ow-panel-head">
+        <button class="ow-back" data-action="back-to-main" title="Back">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+          </svg>
+        </button>
+        <h2>Word Bank</h2>
+        <button class="ow-icon-btn" data-action="open-quiz" title="Quiz" style="margin-left:auto;">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M9 21h6v-1H9v1zm3-19a7 7 0 00-4 12.74V17a1 1 0 001 1h6a1 1 0 001-1v-2.26A7 7 0 0012 2zm0 2a5 5 0 013 9v2H9v-2a5 5 0 013-9z"/>
+          </svg>
+        </button>
+      </div>
+
+      <input type="text" class="ow-input" id="ow-bank-search" placeholder="Search words…" />
+      <div class="ow-bank-scroll" id="ow-bank-list"></div>
+    </section>
+
+    <footer class="ow-footer">
+      <button class="ow-footer-btn active" data-action="open-main">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+        Home
+      </button>
+      <button class="ow-footer-btn" data-action="open-bank">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+          <path d="M18 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 4h5v8l-2.5-1.5L6 12V4z"/>
+        </svg>
+        Bank
+      </button>
+      <button class="ow-footer-btn" data-action="open-settings">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+          <path d="M12 8a4 4 0 100 8 4 4 0 000-8zm9 4c0-.6-.06-1.2-.16-1.76l2.02-1.58a.5.5 0 00.12-.64l-1.92-3.32a.5.5 0 00-.6-.22l-2.39.96a7.03 7.03 0 00-1.52-.88l-.36-2.54A.5.5 0 0015.7 2h-3.84a.5.5 0 00-.49.42l-.36 2.54c-.54.22-1.05.51-1.52.88L7.1 4.88a.5.5 0 00-.6.22L4.58 8.42a.5.5 0 00.12.64L6.72 10.6A7 7 0 006.56 12c0 .6.06 1.2.16 1.76L4.7 15.34a.5.5 0 00-.12.64l1.92 3.32c.13.22.4.3.6.22l2.39-.96c.47.37.98.66 1.52.88l.36 2.54c.04.24.24.42.49.42h3.84c.25 0 .45-.18.49-.42l.36-2.54c.54-.22 1.05-.51 1.52-.88l2.39.96c.22.08.47 0 .6-.22l1.92-3.32a.5.5 0 00-.12-.64l-2.02-1.58c.1-.56.16-1.16.16-1.76z"/>
+        </svg>
+        Settings
+      </button>
+    </footer>
+
+  </aside>
+
+  <!-- ============================================================
+       COLLAPSED FLOATING HANDLE
+       ============================================================ -->
+  <button class="ow-handle hidden" id="ow-handle" type="button"
+          aria-label="Expand OpenWord" title="Expand OpenWord">
+    <span class="ow-handle-dot"></span>
+    <span class="ow-handle-text">OW</span>
+  </button>
+
+  <!-- ============================================================
+       ONBOARDING OVERLAY
+       ============================================================ -->
+  <div class="ow-onboard hidden" id="ow-onboard" role="dialog" aria-modal="true">
+    <div class="ow-onboard-card">
+
+      <header class="ow-onboard-header">
+        <div class="ow-onboard-logo">
+          <span class="ow-onboard-logo-dot"></span>
+          <span>OpenWord</span>
+        </div>
+        <h1>Welcome — let's set you up</h1>
+        <p>Three quick questions. You can change everything later in Settings.</p>
+      </header>
+
+      <div class="ow-onboard-stepper">
+        <span class="ow-step-dot active" data-step="1">1</span>
+        <span class="ow-step-line"></span>
+        <span class="ow-step-dot" data-step="2">2</span>
+        <span class="ow-step-line"></span>
+        <span class="ow-step-dot" data-step="3">3</span>
+      </div>
+
+      <section class="ow-onboard-step" data-step="1">
+        <h2>Which languages are you learning?</h2>
+        <p class="ow-onboard-hint">Pick one or more.</p>
+        <div class="ow-chip-wrap" id="onboard-langs"></div>
+      </section>
+
+      <section class="ow-onboard-step hidden" data-step="2">
+        <h2>What topics interest you?</h2>
+        <p class="ow-onboard-hint">Pick one or more focus areas.</p>
+        <div class="ow-chip-wrap" id="onboard-topics"></div>
+      </section>
+
+      <section class="ow-onboard-step hidden" data-step="3">
+        <h2>How often should words refresh?</h2>
+        <p class="ow-onboard-hint">You can always shuffle manually.</p>
+        <select class="ow-select" id="onboard-interval">
+          <option value="newtab">Every New Tab</option>
+          <option value="1h">Every 1 Hour</option>
+          <option value="4h">Every 4 Hours</option>
+          <option value="24h" selected>Every 24 Hours</option>
+        </select>
+      </section>
+
+      <footer class="ow-onboard-footer">
+        <button class="ow-btn ow-btn-ghost hidden" id="onboard-back" type="button">Back</button>
+        <button class="ow-btn ow-btn-primary" id="onboard-next" type="button">Next</button>
+        <button class="ow-btn ow-btn-primary hidden" id="onboard-start" type="button">Start Learning</button>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- ============================================================
+       QUIZ OVERLAY
+       ============================================================ -->
+  <div class="ow-quiz hidden" id="ow-quiz" role="dialog" aria-modal="true">
+    <div class="ow-quiz-card">
+
+      <button class="ow-quiz-close" data-action="quiz-close" title="Close">✕</button>
+
+      <div class="ow-quiz-view" data-quiz-view="setup">
+        <header class="ow-quiz-head">
+          <div class="ow-quiz-logo"><span class="ow-onboard-logo-dot"></span> Quiz</div>
+          <h1>Test your recall</h1>
+          <p class="ow-onboard-hint">
+            Quiz yourself on words you've collected. Up to 5 multiple-choice questions.
+          </p>
+        </header>
+
+        <div class="ow-quiz-group">
+          <label class="ow-label">
+            Time Range
+            <span class="ow-quiz-range-value" id="quiz-range-value">Last 7 days</span>
+          </label>
+          <input type="range" id="quiz-range" class="ow-range"
+                 min="1" max="7" value="7" step="1" />
+          <div class="ow-range-labels">
+            <span>1 day</span>
+            <span id="quiz-range-max-label">7 days</span>
+          </div>
+        </div>
+
+        <div class="ow-quiz-group">
+          <label class="ow-label">Topic</label>
+          <select class="ow-select" id="quiz-topic">
+            <option value="all">All Topics</option>
+          </select>
+        </div>
+
+        <div class="ow-quiz-group">
+          <label class="ow-label">Language</label>
+          <select class="ow-select" id="quiz-lang">
+            <option value="all">All Languages</option>
+          </select>
+        </div>
+
+        <p class="ow-quiz-pool-summary" id="quiz-pool-summary">
+          Scanning your bank…
+        </p>
+
+        <p class="ow-quiz-warning hidden" id="quiz-warning"></p>
+
+        <footer class="ow-quiz-footer">
+          <button class="ow-btn ow-btn-primary ow-btn-full" data-action="quiz-start">
+            Start Quiz
+          </button>
+        </footer>
+      </div>
+
+      <div class="ow-quiz-view hidden" data-quiz-view="engine">
+        <div class="ow-quiz-progress">
+          <span id="quiz-progress-text">Question 1 of 5</span>
+          <div class="ow-progress-bar"><div id="quiz-progress-fill"></div></div>
+        </div>
+
+        <div class="ow-quiz-question">
+          <p class="ow-quiz-prompt-label">What does this mean?</p>
+          <h2 class="ow-quiz-prompt" id="quiz-prompt">école</h2>
+          <p class="ow-quiz-prompt-sub" id="quiz-prompt-sub">French · Noun · Feminine</p>
+        </div>
+
+        <div class="ow-quiz-options" id="quiz-options"></div>
+
+        <footer class="ow-quiz-footer">
+          <button class="ow-btn ow-btn-primary ow-btn-full hidden" data-action="quiz-next" id="quiz-next-btn">
+            Next →
+          </button>
+        </footer>
+      </div>
+
+      <div class="ow-quiz-view hidden" data-quiz-view="result">
+        <div class="ow-quiz-result-ring">
+          <span id="quiz-result-score">0</span>
+          <span class="ow-quiz-result-divider">/5</span>
+        </div>
+        <h2 class="ow-quiz-result-msg" id="quiz-result-msg">Nice work!</h2>
+        <p class="ow-onboard-hint" id="quiz-result-detail">You answered 0 of 5 correctly.</p>
+
+        <footer class="ow-quiz-footer">
+          <button class="ow-btn ow-btn-ghost" data-action="quiz-retry">Try Again</button>
+          <button class="ow-btn ow-btn-primary" data-action="quiz-close">Done</button>
+        </footer>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

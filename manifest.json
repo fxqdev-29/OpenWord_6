@@ -1,0 +1,8 @@
+{
+  "manifest_version": 3,
+  "name": "OpenWord — Floating Vocabulary Sidebar",
+  "version": "3.7.0",
+  "description": "A sleek vocabulary sidebar that floats over your new tab.",
+  "chrome_url_overrides": { "newtab": "index.html" },
+  "permissions": ["storage", "bookmarks"]
+}
